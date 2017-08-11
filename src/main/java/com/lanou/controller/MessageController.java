@@ -35,6 +35,9 @@ public class MessageController {
 
 	@RequestMapping(value = "/")
 	public String frontPage() {
+		
+		//git测试
+		
 		return "messageBoard";
 	}
 
