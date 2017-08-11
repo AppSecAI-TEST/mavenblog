@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  
+  <!--  -->
+  
+  <classPathEntry location="D:/Program Files/maven/LocalRepository/mysql/mysql-connector-java/5.1.43/mysql-connector-java-5.1.43.jar" />
+  
+  <context id="context1">
+  	
+  	<commentGenerator>
+  		
+  		<!-- 忽略所有的注释 -->
+  		<property name="suppressAllComments" value="true"/>
+  		
+  		<!-- 忽略所有的时间 -->
+  		<property name="suppressDate" value="true"/>
+  		
+  	</commentGenerator>
+  
+    <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/msg" driverClass="com.mysql.jdbc.Driver" 
+    				password="123456" userId="root" />
+    				
+    <!-- bean生成包的位置 -->
+    <javaModelGenerator targetPackage="com.lanou.bean" targetProject="MessageBoard_001/src/main/java" />
+    
+    <!-- xml文件生成的位置 -->
+    <sqlMapGenerator targetPackage="com.lanou.mapper" targetProject="MessageBoard_001/src/main/java" />
+    
+    <!-- interface生成的位置 -->
+    <javaClientGenerator targetPackage="com.lanou.mapper" targetProject="MessageBoard_001/src/main/java" type="XMLMAPPER" />
+    
+    <!-- 具体配置表 -->
+    <table tableName="message" enableCountByExample="false" enableSelectByExample="false"
+    						   enableDeleteByExample="false" enableUpdateByExample="false"/>
+  </context>
+</generatorConfiguration>
